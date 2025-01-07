@@ -1,37 +1,104 @@
-html {
+/* General Reset */
+html, body {
   height: 100%;
   width: 100%;
-  font-family: "Titillium Web", sans-serif;
+  margin: 0;
+  padding: 0;
+  font-family: "Arial", sans-serif;
 }
 
+/* Body Background */
 body {
   min-height: 100%;
   min-width: 100%;
-  background: linear-gradient(pink, violet);
+  background: linear-gradient(120deg, #d9f7f6, #fff4e3); /* Soft aqua and cream gradient */
+  color: #333; /* Neutral text color */
 }
 
+/* Button Styles */
 button {
-  font-size: 7px;
+  font-size: 14px; /* Slightly larger for readability */
+  padding: 6px 12px;
+  border: none;
+  background-color: #ff6f61; /* Soft coral */
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
 }
 
+button:hover {
+  background-color: #e05a4f; /* Darker coral on hover */
+}
+
+/* Main Content Styling */
 #main-content {
   position: relative;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
-  border: 1px solid #333;
-  background: rgba(255, 255, 255, 0.3);
-  padding: 15px 20px 18px 18px;
-  border-radius: 5px;
-  box-shadow: 2px 5px 5px #333;
+  width: 85%;
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 25px;
+  background: rgba(255, 255, 255, 0.95); /* Subtle white overlay */
+  border: 2px solid #e5e5e5;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
+/* List Container */
 #list {
-  margin: 10px;
-  border: 1px solid #333;
-  background: rgba(255, 255, 255, 0.75);
-  padding: 15px 20px 18px 18px;
-  border-radius: 5px;
-  box-shadow: 2px 5px 5px #333;
+  width: 100%;
+  margin-top: 20px;
+  padding: 15px;
+  border: 2px solid #e5e5e5;
+  background: rgba(255, 255, 255, 0.95); /* Slightly opaque white */
+  border-radius: 10px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Task List Styles */
+ul#tasks {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+ul#tasks li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  margin-bottom: 12px;
+  border-radius: 6px;
+  transition: background-color 0.3s ease-in-out;
+  font-size: 14px;
+}
+
+/* Priority-Specific Colors */
+ul#tasks li[style*="color: red"] {
+  background-color: #ffe6e6; /* Soft blush for high priority */
+}
+
+ul#tasks li[style*="color: orange"] {
+  background-color: #fff1d6; /* Light peach for medium priority */
+}
+
+ul#tasks li[style*="color: green"] {
+  background-color: #e7ffe6; /* Soft mint for low priority */
+}
+
+/* Priority Color Borders */
+ul#tasks li[style*="color: red"] {
+  border-left: 4px solid #ff4d4d; /* Deep blush border for high priority */
+}
+
+ul#tasks li[style*="color: orange"] {
+  border-left: 4px solid #ffb84d; /* Sunset orange border for medium priority */
+}
+
+ul#tasks li[style*="color: green"] {
+  border-left: 4px solid #6dd17a; /* Vibrant green border for low priority */
 }
